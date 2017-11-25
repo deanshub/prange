@@ -164,6 +164,15 @@ function subrange(s) {
 function prange(s) {
   const set = new Set()
   const subs = s
+     // correct lower and upper cases
+    .replace(/a/g,'A')
+    .replace(/k/g,'K')
+    .replace(/q/g,'Q')
+    .replace(/j/g,'J')
+    .replace(/10/g,'T')
+    .replace(/t/g,'T')
+    .replace(/O/g,'o')
+    .replace(/S/g,'s')
      // correct things like AJs -A9s to AJs-A9s
     .replace(
       /([A,K,Q,J,T,2-9]{2}[o,s]?)\s*-\s*([A,K,Q,J,T,2-9]{2}[o,s]?)/g
